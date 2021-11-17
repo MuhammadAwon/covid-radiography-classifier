@@ -8,13 +8,13 @@ from PIL import Image, ImageOps
 # Title
 st.title('Covid Image Classifier')
 # Display image
-display_img = Image.open('images\display_image.jpg')
+display_img = Image.open('covid-webapp\images\display_image.jpg')
 st.image(display_img, use_column_width=True)
 
 # Create function to load model
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.keras.models.load_model('mobilnetv3small_saved_model')
+    model = tf.keras.models.load_model('covid-webapp\mobilnetv3small_saved_model')
     return model
 
 # Load model
